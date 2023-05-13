@@ -22,9 +22,6 @@
 }
 
 
-
-
-
 /* Menu */
 
 .menu {
@@ -34,6 +31,7 @@
     background: var(--Color13);
     grid-template-columns: repeat(3, 5fr);
     grid-template-areas: "idioma logo opciones";
+    border-bottom: solid 2px black;
 }
 
 .idioma {
@@ -46,38 +44,48 @@
     grid-area: logo;
     width: 100px;
     height: 100px;
-    margin: 5px auto;
+    margin: 0px auto;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.603);
     border: solid black 2px;
     border-radius: 200px;
+    transform: translateY(10px);
+    z-index: 2;
 }
 
 .opciones {
     grid-area: opciones;
-    text-align: center;
-    margin: auto;
+    margin: auto 0;
+}
+
+.opciones ul, li {
+    display: inline-block;
+    padding: 5px;
+    font-size: 1.1em;
 }
 
 .opciones ul, li, a {
-    display: inline-block;
     list-style-type: none;
     text-decoration: none;
-    color: var(--Color7);
+    text-transform: uppercase;
+    color: var(--Color3);
 }
 
-/* Boton seleccionar idioma */
+
+/* Estilo Boton seleccionar idioma */
 
 .cambiarIdioma {
     position: relative;
     width: 50px;
+    transform: translateY(-5px);
 }
+
 
 .cambiarIdioma::before {
     content: '';
     position: absolute;
     width: 50px;
     height: 25px;
-    background: var(--Color7);
+    background: var(--Color1);
     border-radius: 25px;
 }
 
@@ -89,7 +97,7 @@
     background: var(--Color9);
     border-radius: 25px;
     transition: 0.25s;
-    border: 2px solid var(--Color7);
+    border: 2px solid var(--Color1);
     box-sizing: border-box;
 }
 
@@ -100,4 +108,84 @@
 
 .cambiarIdioma:checked::before {
     background: var(--Color8);
+}
+
+/* color selector idioma  */
+
+.idioma {
+    color: var(--Color3);
+}
+
+/* Acionador para el responsibe del menu */
+
+.movil {
+    grid-area: opciones;
+    margin: auto auto;
+    display: none;
+}
+
+
+/* Diseño responsibo */
+
+
+@media (max-width: 1442px){
+
+    /* Menu */
+
+    .menu {
+        font-size: .8em;
+    }
+
+}
+
+@media (max-width: 1185px){
+
+    /* Menu */
+
+    .menu {
+        font-size: .8em;
+    }
+    .movil {
+        display: block;
+    }
+    .checkbtn {
+        font-size: 30px;
+        color: var(--Color3);
+        cursor: pointer;
+    }
+
+    #check {
+        display: none;
+    }
+    
+
+    .opciones {
+        grid-column: 1 / -1;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--Color13);
+        top: 90px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .opciones-visible {
+        left: 0;
+    }
+    
+    .opciones ul li {
+        display: block;
+        margin: 50px 0;
+        text-align: center;
+        line-height: 10px;
+    }
+    
+    .opciones ul li a {
+        font-size: 20px;
+    }
+    
+    
+
 }
