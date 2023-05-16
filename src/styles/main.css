@@ -71,6 +71,10 @@
 }
 
 
+.opciones a:hover {
+    color: var(--Color1);
+}
+
 /* Estilo Boton seleccionar idioma */
 
 .cambiarIdioma {
@@ -124,6 +128,89 @@
     grid-area: opciones;
     margin: auto auto;
     display: none;
+}
+
+/* Estilos del main */
+
+main {
+    width: 100%;
+    height: calc(100vh - 90px);
+
+    /* Imagen Fondo */
+
+    background-image: url(../img/Fondo-Inicio.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: .9;
+}
+
+/* Inicio */
+
+#inicio {
+    display: grid;
+    width: 100%;
+    height: calc(100vh - 90px);
+}
+
+.informacion {
+    width:  30%;
+    height: 30%;
+    margin: auto auto;
+    background: var(--Color9);
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
+.informacion h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+.informacion h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.informacion i {
+    font-size: 2em;
+    margin: auto auto;
+    background: var(--Color1);
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.603);
+}
+.informacion i {
+    font-size: 2em;
+    margin: auto auto;
+    background: var(--Color1);
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.603);
+}
+
+.social a {
+    text-decoration: none;
+}
+
+.informacion .social {
+    margin-top: 25px;
+    text-align: center;
+
+}
+
+/* twitter */
+.social a i:nth-child(1) {
+    color: #03a4ec;
+}
+
+/* instagram */
+.social a i:nth-child(2) {
+    color: #dd2a7b;
 }
 
 
