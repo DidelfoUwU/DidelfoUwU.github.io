@@ -132,7 +132,7 @@
 
 /* Estilos del main */
 
-main {
+header {
     width: 100%;
     height: calc(100vh - 90px);
 
