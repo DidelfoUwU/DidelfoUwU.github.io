@@ -184,17 +184,9 @@ header {
     padding: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.603);
 }
-.informacion i {
-    font-size: 2em;
-    margin: auto auto;
-    background: var(--Color1);
-    border-radius: 50px;
-    padding: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.603);
-}
 
 .social a {
-    text-decoration: none;
+    text-decoration: none;;
 }
 
 .informacion .social {
@@ -204,15 +196,19 @@ header {
 }
 
 /* twitter */
-.social a i:nth-child(1) {
+.social a:nth-child(1) {
     color: #03a4ec;
 }
 
 /* instagram */
-.social a i:nth-child(2) {
+.social a:nth-child(2) {
     color: #dd2a7b;
 }
 
+/* github */
+.social a:nth-child(3) {
+    color: black;
+}
 
 /* Diseño responsibo */
 
