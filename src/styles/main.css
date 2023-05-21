@@ -12,6 +12,8 @@
     --Color11: #00addb;
     --Color12: #007193;
     --Color13: #ff5a68d2;
+    --Color14: #323232;
+    --Color15: #3f3e3e;
 }
 
 * {
@@ -57,13 +59,16 @@
     margin: auto 0;
 }
 
-.opciones ul, li {
+.opciones ul,
+li {
     display: inline-block;
     padding: 5px;
     font-size: 1.1em;
 }
 
-.opciones ul, li, a {
+.opciones ul,
+li,
+a {
     list-style-type: none;
     text-decoration: none;
     text-transform: uppercase;
@@ -115,7 +120,8 @@
 }
 
 /* Tamaño banderas */
-.es,.en {
+.es,
+.en {
     width: 50px;
     height: 50px;
 }
@@ -154,7 +160,7 @@ header {
 }
 
 .informacion {
-    width:  30%;
+    width: 30%;
     height: 30%;
     margin: auto auto;
     background: var(--Color9);
@@ -187,7 +193,8 @@ header {
 }
 
 .social a {
-    text-decoration: none;;
+    text-decoration: none;
+    ;
 }
 
 .social i:hover {
@@ -215,10 +222,93 @@ header {
     color: black;
 }
 
+/* Habilidades */
+.habilidades {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--Color14);
+}
+
+.habilidades article h1 {
+    font-size: 4em;
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+}
+
+.habilidades article h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+}
+
+/* color 6 para los bordes */
+
+.contenedor-cartas {
+    display: flex;
+    grid-gap: 80px;
+    padding-bottom: 60px;
+}
+
+/* Estilos tarjetas giratorias */
+
+.girar-tarjeta {
+    width: 320px;
+    height: 504px;
+    perspective: 2000px;
+    cursor: pointer;
+}
+
+.contenido-carta {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 28px;
+    transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+    transform-style: preserve-3d;
+}
+
+.carta-delante,
+.carta-atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    backface-visibility: hidden;
+}
+
+.contenedor-cartas .carta-delante {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/Lenguajes/java.png);
+    background-color: var(--Color1);
+}
+
+.carta-atras {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding: 32px;
+    background-color: var(--Color2);
+    transform: rotateY(180deg);
+}
+
+.girar-tarjeta:hover .contenido-carta {
+    transform: rotateY(-180deg);
+}
+
+
 /* Diseño responsibo */
 
 
-@media (max-width: 1442px){
+@media (max-width: 1442px) {
 
     /* Menu */
 
@@ -228,16 +318,18 @@ header {
 
 }
 
-@media (max-width: 1185px){
+@media (max-width: 1185px) {
 
     /* Menu */
 
     .menu {
         font-size: .8em;
     }
+
     .movil {
         display: block;
     }
+
     .checkbtn {
         font-size: 30px;
         color: var(--Color3);
@@ -247,7 +339,7 @@ header {
     #check {
         display: none;
     }
-    
+
 
     .opciones {
         grid-column: 1 / -1;
@@ -264,48 +356,50 @@ header {
     .opciones-visible {
         left: 0;
     }
-    
+
     .opciones ul li {
         display: block;
         margin: 50px 0;
         text-align: center;
         line-height: 10px;
     }
-    
+
     .opciones ul li a {
         font-size: 20px;
     }
-    
+
     /* Tamaño banderas */
-    .es,.en {
+    .es,
+    .en {
         width: 25px;
         height: 25px;
     }
+
     .cambiarIdioma {
         position: relative;
         width: 50px;
         transform: translateY(-13px);
     }
-    
+
     /* Header */
 
     .informacion {
-        width:  30%;
+        width: 30%;
         height: 30%;
         margin: auto auto;
         background: var(--Color9);
         border: solid 2px black;
         border-radius: 20px;
     }
-    
+
     .informacion h1 {
         font-size: 1.2em;
     }
-    
+
     .informacion h3 {
         font-size: 1em;
     }
-    
+
     .informacion i {
         font-size: 1.5em;
     }
