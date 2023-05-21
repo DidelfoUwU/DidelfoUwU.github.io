@@ -245,8 +245,6 @@ header {
     padding-top: 25px;
 }
 
-/* color 6 para los bordes */
-
 .contenedor-cartas {
     display: flex;
     grid-gap: 80px;
@@ -282,12 +280,20 @@ header {
 }
 
 .contenedor-cartas .carta-delante {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/Lenguajes/java.png);
     background-color: var(--Color1);
 }
+
+.contenedor-cartas .carta-delante img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 
 .carta-atras {
     color: white;
@@ -384,25 +390,38 @@ header {
     /* Header */
 
     .informacion {
-        width: 30%;
-        height: 30%;
+        width: 40%;
+        height: 25%;
         margin: auto auto;
-        background: var(--Color9);
-        border: solid 2px black;
-        border-radius: 20px;
     }
 
     .informacion h1 {
-        font-size: 1.2em;
+        font-size: .8em;
     }
 
     .informacion h3 {
-        font-size: 1em;
+        font-size: .8em;
     }
 
     .informacion i {
-        font-size: 1.5em;
+        font-size: .5em;
     }
+
+    /* Cartas */
+
+    .habilidades {
+        height: max-content;
+    }
+
+    .contenedor-cartas {
+        display: flex;
+        grid-gap: 80px;
+        padding-bottom: 60px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
 
 
 
