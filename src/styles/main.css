@@ -153,7 +153,7 @@ header {
 
 /* Inicio */
 
-#inicio {
+.inicio {
     display: grid;
     width: 100%;
     height: calc(100vh - 90px);
@@ -310,20 +310,94 @@ header {
     transform: rotateY(-180deg);
 }
 
+/* Proyectos */
 
-/* Diseño responsibo */
-
-
-@media (max-width: 1442px) {
-
-    /* Menu */
-
-    .menu {
-        font-size: .8em;
-    }
-
+.proyectos {
+    display: block;
+    background-color: var(--Color13);
+    height: 100vh;
+    position: relative;
 }
 
+.proyectos>h1 {
+    text-align: center;
+    color: white;
+    font-size: 3.5em;
+    padding-top: 25px;
+}
+
+.proyectos-contenedor {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.proyecto {
+    width: 320px;
+    height: 500px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+
+.proyecto img {
+    height: 500px;
+    width: 100%;
+}
+
+.info-proyecto {
+    height: 70px;
+    width: 320px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0%;
+    background: rgb(27, 27, 27, .5);
+    color: white;
+}
+
+
+.info-proyecto h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.info-proyecto p {
+    padding-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.proyecto:hover {
+    cursor: pointer;
+}
+
+.proyecto:hover .info-proyecto {
+    height: 40%;
+    background: rgb(27, 27, 27, .5);
+}
+
+.proyecto:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+.proyecto:hover img {
+    transform: scale(1.1) rotate(-3deg);
+    transition: 0.8;
+}
+
+/* Diseño responsibo */
 @media (max-width: 1185px) {
 
     /* Menu */
@@ -407,7 +481,7 @@ header {
         font-size: .5em;
     }
 
-    /* Cartas */
+    /* Cartas / habilidades */
 
     .habilidades {
         height: max-content;
@@ -423,6 +497,38 @@ header {
     }
 
 
+    /* Proyectos */
 
+    .proyectos {
+        height: auto;
+        padding-bottom: 50px;
+    }
 
+    .proyectos-contenedor {
+        padding-top: 25px;
+        position: static;
+        transform: none;
+    }
+
+    .proyecto h1 {
+        font-size: 25px;
+    }
+
+    .info-proyecto {
+        position: relative;
+        bottom: 14%;
+    }
+
+    .proyecto:hover .info-proyecto {
+        bottom: 40%;
+        background: rgb(27, 27, 27, .5);
+    }
+
+    .proyecto:hover h1 {
+        font-size: 25px;
+    }
+
+    .proyecto:hover p {
+        font-size: 15px;
+    }
 }
