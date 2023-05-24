@@ -24,6 +24,10 @@
     font-family: sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* Menu */
 
@@ -476,8 +480,88 @@ header {
     transition: .9s;
 }
 
-/* Botton arriba */
+/* Footer */
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background: var(--Color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.logo-footer {
+    border-radius: 200px;
+    height: 90px;
+    margin-bottom: 1rem;
+}
+
+.social-contenedor, .footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-contenedor i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    border: 1px solid white;
+    margin: 1rem;
+    font-size: 2em;
+}
+
+/* twitter */
+.social-contenedor a:nth-child(1) {
+    color: #03a4ec;
+}
+
+/* instagram */
+.social-contenedor a:nth-child(2) {
+    color: #dd2a7b;
+}
+
+/* github */
+.social-contenedor a:nth-child(3) {
+    color: black;
+}
+
+.social-contenedor i:hover {
+    background: var(--Color1);
+    filter: invert(1);
+}
+
+.footer-menu {
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.item-footer {
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.8;
+}
+
+.item-footer:hover {
+    opacity: 1;
+}
+
+.copyright {
+    color: white;
+    opacity: 0.6;
+    text-align: center;
+}
+
+/* Botton arriba */
 #botonArriba {
     background: var(--Color2);
     border-radius: 500px;
