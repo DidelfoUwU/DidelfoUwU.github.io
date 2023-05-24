@@ -31,10 +31,16 @@ function irArriba(pxPantalla){
     window.addEventListener('scroll', () =>{
         var scroll = document.documentElement.scrollTop;
         var botonArriba = document.getElementById('botonArriba');
+        var MenuVisible = Menu.classList.contains('opciones-visible'); 
+
+        if( scroll > 1 && MenuVisible){
+            Menu.classList.remove('opciones-visible');
+        }
 
         if (scroll > pxPantalla) {
             botonArriba.style.right = 20 + "px";
             botonArriba.style.visibility = "visible";
+
         } else {
             botonArriba.style.right = -100 + "px";
             botonArriba.style.visibility = "hidden";
