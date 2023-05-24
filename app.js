@@ -23,3 +23,24 @@ const Menu = document.querySelector(".opciones")
 iconoMenu.addEventListener('click', () => {
     Menu.classList.toggle('opciones-visible');
 });
+
+
+// Flechita para ir hacia arriba
+
+function irArriba(pxPantalla){
+    window.addEventListener('scroll', () =>{
+        var scroll = document.documentElement.scrollTop;
+        var botonArriba = document.getElementById('botonArriba');
+
+        if (scroll > pxPantalla) {
+            botonArriba.style.right = 20 + "px";
+            botonArriba.style.visibility = "visible";
+        } else {
+            botonArriba.style.right = -100 + "px";
+            botonArriba.style.visibility = "hidden";
+        }
+    });
+}
+
+
+irArriba(300);
