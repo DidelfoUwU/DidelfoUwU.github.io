@@ -5,7 +5,7 @@
     --Color4: #172b51;
     --Color5: #ff8ccc;
     --Color6: #f166b1;
-    --Color7: #ff5a68d2;
+    --Color7: #ff5a68;
     --Color8: #323232;
 }
 
@@ -578,6 +578,7 @@ footer {
     /* Menu */
 
     .menu {
+        z-index: 1;
         font-size: .8em;
     }
 
@@ -597,6 +598,7 @@ footer {
 
 
     .opciones {
+        z-index: 1;
         grid-column: 1 / -1;
         position: fixed;
         width: 100%;
